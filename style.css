@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+
+a {
+    color: aliceblue;
+}
+
+.costas {
+    margin: auto;
+    max-width: 400px;
+    margin: auto;
+    display: block;
+}
+
+.divisor {
+    text-align: center;
+}
+
+.terra {
+    text-align: center;
+}
