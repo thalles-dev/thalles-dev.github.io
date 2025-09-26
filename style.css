@@ -1,0 +1,33 @@
+body {
+    background: #D6AF85;
+    text-align: center;
+    color: white;
+}
+/*
+text-align: como não é vários elementos, é apenas texto, serve como o "margin: auto", deixa o negócio no centro.
+
+*/
+section {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.427);
+}
+
+/* 
+border-radius: fazer as bordas do elemento ficarem redondinhas, 
+
+padding: faz os elementos não ficarem todos juntos
+
+width: faz o elemento ter altura fixa.
+
+box-shadow: faz ter aquela sombra em volta.
+*/
+
+img {
+    width: 500px;
+    height: 250px;
+}
