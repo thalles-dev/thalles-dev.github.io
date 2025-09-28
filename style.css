@@ -12,7 +12,8 @@ section {
     color: black;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.427);
 }
@@ -28,6 +29,10 @@ box-shadow: faz ter aquela sombra em volta.
 */
 
 img {
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    height: auto;
+}
+
+#music-box {
+    margin-bottom: 10px;
 }
