@@ -1,38 +1,75 @@
 body {
-    background: #D6AF85;
-    text-align: center;
-    color: white;
+  background: #6d3800;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
 }
-/*
-text-align: como não é vários elementos, é apenas texto, serve como o "margin: auto", deixa o negócio no centro.
 
-*/
+/* Caixa principal */
 section {
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 15px;
-    max-width: 500px;
-    width: 90%;
-    margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.427);
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 500px;
+  width: 90%;
+  margin: 20px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
-/* 
-border-radius: fazer as bordas do elemento ficarem redondinhas, 
-
-padding: faz os elementos não ficarem todos juntos
-
-width: faz o elemento ter altura fixa.
-
-box-shadow: faz ter aquela sombra em volta.
-*/
-
+/* Imagens */
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-#music-box {
-    margin-bottom: 10px;
+/* Header */
+#msg-i {
+  font-size: 1.5em; /* fixo */
 }
+
+#msg-ii {
+  font-size: 1.1em; /* fixo e menor que o h1 */
+}
+
+/* Caixa do Last.fm */
+#lastfm-box {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+#lastfm-box {
+  position: relative;      
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  text-align: left;
+}
+
+
+
+#lastfm-status {
+  font-size: 14px;
+}
+
+/* gif no canto superior direito da caixinha */
+/* gif no canto superior direito da caixinha */
+#pokemon-gif {
+  position: absolute;
+  top: -20px;   
+  right: -20px; 
+  width: 60px;  
+  height: auto;
+}
+

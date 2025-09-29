@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melhor Site do Mundo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melhor Site do Mundo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header> <!-- Parte de cima do site, sítulo, cabeçalho.-->
-        <h1>Meu próprio mundinho</h1>
-    </header>
+<body onload="carregar()"> <!-- chama o script ao abrir -->
 
-    <section> <!--Seção, corpo inteiro do site, seu tronco.-->
-        <div>
-        <img src="/images/apolo-e-musas.webp" alt="apolo">
-        </div>
-        <div>
-        <p>As nove musas gregas eram lembradas como Cmodealíope da <a href="https://medium.com/@wzsams">escrita</a>, Clio da história, Érato do amor, Euterpe da <a href="">música</a>, Melpômene da tragédia, Polímnia da fé, Terpsícore da dança, Tália da comédia e Urânia das estrelas</p>
-        </div>
-    </section>
+  <header>
+    <h1 id="msg-i">✰</h1>
+    <h2 id="msg-ii"><em>"A terra se tornará um planeta inabitável, mas se eu puder ao menos salvar a ti, tudo terá valido a pena..."</em></h2>
+  </header>
 
-    <footer>
-        <p>Sam (삼)</p>
-    </footer>
-    <script src="script.js"></script>
+  <!-- Caixa do Last.fm -->
+<section id="lastfm-box">
+  <img id="pokemon-gif" src="images/pokemon-noite.gif" alt="Pokemon do momento">
+  <p id="lastfm-status">Carregando música...</p>
+</section>
+
+
+  <!-- Caixa principal -->
+  <section id="junkbox">
+    <div>
+      <img src="images/apolo-e-musas.webp" alt="apolo" id="imagem-hora">
+    </div>
+    <div id="conteudo">
+      <p>
+        As nove musas gregas eram lembradas como Cmodealíope da 
+        <a href="https://medium.com/@wzsams">escrita</a>, Clio da história, Érato do amor, 
+        Euterpe da <a href="">música</a>, Melpômene da tragédia, Polímnia da fé, 
+        Terpsícore da dança, Tália da comédia e Urânia das estrelas
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Sam (삼)</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
