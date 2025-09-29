@@ -13,9 +13,9 @@ const msgII = document.getElementById("msg-ii");
 // =========================
 // Função: muda layout pela hora
 // =========================
-function carregar() {
-  //const hora = new Date().getHours();
-  hora = 0
+async function carregar() {
+  const hora = await pegarHoraBrasil(); // pega hora de Brasília
+
   if (hora >= 0 && hora < 6) {
     imagemHora.src = 'images/madrugada.gif';
     document.body.style.background = '#000102';
@@ -40,6 +40,7 @@ function carregar() {
     pokemonGif.src = 'images/pokemon-noite.gif';
     msgII.innerHTML = '<em>"Será que a Rita está olhando para a mesma lua neste mesmo momento?<br>Eu gosto disso... Conectados pela luz."</em>';
   }
+
 
   atualizarMusica(); 
   setInterval(atualizarMusica, 30000); // atualiza a cada 30s
