@@ -14,8 +14,7 @@ const msgII = document.getElementById("msg-ii");
 // Função: muda layout pela hora
 // =========================
 function carregar() {
-  //const hora = new Date().getHours();
-  hora = 3
+  const hora = new Date().getHours();
   if (hora >= 0 && hora < 6) {
     imagemHora.src = 'images/madrugada.gif';
     document.body.style.background = '#000102';
