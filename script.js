@@ -10,52 +10,22 @@ const imagemHora = document.getElementById("imagem-hora");
 const pokemonGif = document.getElementById("pokemon-gif");
 const msgII = document.getElementById("msg-ii");
 
-async function pegarHoraBrasil() {
-  try {
-    const response = await fetch('https://worldtimeapi.org/api/timezone/America/Sao_Paulo');
-    const data = await response.json();
-    const hora = parseInt(data.datetime.slice(11,13)); // pega os dois dígitos da hora
-    return hora;
-  } catch (error) {
-    console.error("Erro ao pegar hora do Brasil:", error);
-    return new Date().getHours(); // fallback: hora local
-  }
-}
-
-
 // =========================
-// Função: muda layout pela hora
+// Função: configura o layout fixo (somente madrugada)
 // =========================
-async function carregar() {
-  const hora = await pegarHoraBrasil(); // pega hora de Brasília
+function carregar() {
+  // Banner fixo
+  imagemHora.src = 'images/madrugada.gif';
+  document.body.style.background = '#000102';
+  
+  // Gif do Pokémon fixo
+  pokemonGif.src = 'images/pokemon-madrugada.gif';
+  
+  // Mensagem fixa
+  msgII.innerHTML = '<em>"Nos meus sonhos inquietos, vejo aquela cidade... Silent Hill."</em>';
 
-  if (hora >= 0 && hora < 6) {
-    imagemHora.src = 'images/madrugada.gif';
-    document.body.style.background = '#000102';
-    pokemonGif.src = 'images/pokemon-madrugada.gif';
-    msgII.innerHTML = '<em>"Nos meus sonhos inquietos, vejo aquela cidade... Silent Hill."</em>';
-
-  } else if (hora >= 6 && hora < 12) {
-    imagemHora.src = 'images/manha.gif';
-    document.body.style.background = '#6B9CC6';
-    pokemonGif.src = 'images/pokemon-manha.gif';
-    msgII.innerHTML = '<em>"Bom dia! Que as musas inspirem teu início."</em>';
-
-  } else if (hora >= 12 && hora < 18) {
-    imagemHora.src = 'images/tarde.jpg';
-    document.body.style.background = '#623217';
-    pokemonGif.src = 'images/pokemon-tarde.gif';
-    msgII.innerHTML = '<em>"O sol alto testemunha teus passos."</em>';
-
-  } else {
-    imagemHora.src = 'images/noite.gif';
-    document.body.style.background = '#374a82ff';
-    pokemonGif.src = 'images/pokemon-noite.gif';
-    msgII.innerHTML = '<em>"Será que a Rita está olhando para a mesma lua neste mesmo momento?<br>Eu gosto disso... Conectados pela luz."</em>';
-  }
-
-
-  atualizarMusica(); 
+  // Atualiza música do Last.fm
+  atualizarMusica();
   setInterval(atualizarMusica, 30000); // atualiza a cada 30s
 }
 
