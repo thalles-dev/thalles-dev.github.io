@@ -10,6 +10,19 @@ const imagemHora = document.getElementById("imagem-hora");
 const pokemonGif = document.getElementById("pokemon-gif");
 const msgII = document.getElementById("msg-ii");
 
+async function pegarHoraBrasil() {
+  try {
+    const response = await fetch('https://worldtimeapi.org/api/timezone/America/Sao_Paulo');
+    const data = await response.json();
+    const hora = parseInt(data.datetime.slice(11,13)); // pega os dois dígitos da hora
+    return hora;
+  } catch (error) {
+    console.error("Erro ao pegar hora do Brasil:", error);
+    return new Date().getHours(); // fallback: hora local
+  }
+}
+
+
 // =========================
 // Função: muda layout pela hora
 // =========================
