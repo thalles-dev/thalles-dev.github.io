@@ -15,7 +15,7 @@ const msgII = document.getElementById("msg-ii");
 // =========================
 function carregar() {
   //const hora = new Date().getHours();
-  hora = 0
+  hora = 3
   if (hora >= 0 && hora < 6) {
     imagemHora.src = 'images/madrugada.gif';
     document.body.style.background = '#000102';
