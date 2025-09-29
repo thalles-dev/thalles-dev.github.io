@@ -15,29 +15,30 @@ const msgII = document.getElementById("msg-ii");
 // =========================
 function carregar() {
   const hora = new Date().getHours();
+
   if (hora >= 0 && hora < 6) {
-    imagemHora.src = 'thalles-dev.github.io/images/madrugada.gif';
+    imagemHora.src = 'images/madrugada.gif';
     document.body.style.background = '#000102';
-    pokemonGif.src = 'thalles-dev.github.io/images/pokemon-madrugada.gif';
+    pokemonGif.src = 'images/pokemon-madrugada.gif';
     msgII.innerHTML = '<em>"Nos meus sonhos inquietos, vejo aquela cidade... Silent Hill."</em>';
 
   } else if (hora >= 6 && hora < 12) {
-    imagemHora.src = 'thalles-dev.github.io/images/manha.gif';
+    imagemHora.src = 'images/manha.gif';
     document.body.style.background = '#6B9CC6';
-    pokemonGif.src = 'thalles-dev.github.io/images/pokemon-manha.gif';
+    pokemonGif.src = 'images/pokemon-manha.gif';
     msgII.innerHTML = '<em>"Bom dia! Que as musas inspirem teu início."</em>';
 
   } else if (hora >= 12 && hora < 18) {
-    imagemHora.src = 'thalles-dev.github.io/images/tarde.jpg';
+    imagemHora.src = 'images/tarde.jpg';
     document.body.style.background = '#623217';
-    pokemonGif.src = 'thalles-dev.github.io/images/pokemon-tarde.gif';
+    pokemonGif.src = 'images/pokemon-tarde.gif';
     msgII.innerHTML = '<em>"O sol alto testemunha teus passos."</em>';
 
   } else {
-    imagemHora.src = 'thalles-dev.github.io/images/noite.gif';
+    imagemHora.src = 'images/noite.gif';
     document.body.style.background = '#374a82ff';
     pokemonGif.src = 'images/pokemon-noite.gif';
-    msgII.innerHTML = '<em>"Será que a Rita está olhando para a mesma lua neste mesmo momento? <br> Eu gosto disso... Conectados pela luz."</em>';
+    msgII.innerHTML = '<em>"Será que a Rita está olhando para a mesma lua neste mesmo momento?<br>Eu gosto disso... Conectados pela luz."</em>';
   }
 
   atualizarMusica(); 
@@ -65,7 +66,6 @@ async function atualizarMusica() {
       elementoDestino.innerText = `🎧 Ouvindo agora: ${musica} – ${artista}`;
     } else {
       elementoDestino.innerHTML = `Não estou escutando nenhuma música agora... mas a última foi:<br>${musica} – ${artista}`;
-
     }
 
   } catch (error) {
